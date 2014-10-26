@@ -1,0 +1,1 @@
+A Bolg created by Laravel 4.2
