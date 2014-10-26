@@ -9,10 +9,10 @@ class SentrySeeder extends Seeder {
     DB::table('users_groups')->delete();
  
     Sentry::getUserProvider()->create(array(
-      'email'      => 'oo@xx.com',
-      'password'   => "ooxx",
-      'first_name' => 'OO',
-      'last_name'  => 'XX',
+      'email'      => 'aron@codestack.me',
+      'password'   => "codestack",
+      'first_name' => 'Aron',
+      'last_name'  => 'Gao',
       'activated'  => 1,
     ));
  
@@ -22,7 +22,7 @@ class SentrySeeder extends Seeder {
     ));
  
     // 将用户加入用户组
-    $adminUser  = Sentry::getUserProvider()->findByLogin('oo@xx.com');
+    $adminUser  = Sentry::getUserProvider()->findByLogin('aron@codestack.me');
     $adminGroup = Sentry::getGroupProvider()->findByName('Admin');
     $adminUser->addGroup($adminGroup);
   }

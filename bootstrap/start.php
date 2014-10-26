@@ -26,7 +26,7 @@ $app = new Illuminate\Foundation\Application;
 
 $env = $app->detectEnvironment(array(
 
-	'local' => array('shanhuhai-desktop'),
+	'local' => array('shanhuhai-desktop','shanhuhaitekiMacBook-Air.local'),
 
 ));
 

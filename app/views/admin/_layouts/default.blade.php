@@ -2,17 +2,17 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>G-Blog</title>
+  <title>SheetPress</title>
 
   @include('admin._partials.assets')
-
+  @yield('header')
 </head>
 <body>
 <div class="container">
   <div class="navbar navbar-inverse navbar-fixed-top">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="{{ URL::route('admin.pages.index') }}">G-Blog</a>
+      <a class="brand" href="{{ URL::route('admin.pages.index') }}">SheetPress</a>
 
       @include('admin._partials.navigation')
 
@@ -25,5 +25,6 @@
   @yield('main')
 
 </div>
+@yield('footer')
 </body>
 </html>

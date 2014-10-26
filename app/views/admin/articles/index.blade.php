@@ -19,7 +19,7 @@
             @foreach ($articles as $page)
                 <tr>
                     <td>{{ $page->id }}</td>
-                    <td><a href="{{ URL::route('admin.articles.show', $page->id) }}">{{ $page->title }}</a> <a
+                    <td><a href="{{ URL::route('admin.articles.edit', $page->id) }}">{{ $page->title }}</a> <a
                             href="{{ URL::route('home.article', $page->id) }}" target="_blank"><button class="btn"> view</button></a></td>
                     <td>{{ $page->updated_at }}</td>
                     <td>

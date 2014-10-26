@@ -1,4 +1,13 @@
 @extends('admin._layouts.default')
+
+@section('header')
+<link rel="stylesheet" type="text/css" href="{{ URL::asset('packages/pagedown/editor.css') }}" />
+<link rel="stylesheet" type="text/css" href="{{ URL::asset('packages/pagedown/editor.css') }}'" />
+
+ <script type="text/javascript" src="{{ URL::asset('packages/pagedown/Markdown.Converter.js') }}"></script>
+ <script type="text/javascript" src="{{ URL::asset('packages/pagedown/Markdown.Sanitizer.js') }}"></script>
+ <script type="text/javascript" src="{{ URL::asset('packages/pagedown/Markdown.Editor.js') }}"></script>
+@stop
  
 @section('main')
  
@@ -22,10 +31,18 @@
         </div>
 
         <div class="control-group">
-            {{ Form::label('body', 'Content') }}
-            <div class="controls">
-                {{ Form::textarea('body') }}
-            </div>
+            {{ Form::label('wmd-input', 'Content') }}
+            {{--<div class="controls">--}}
+                {{--{{ Form::textarea('body') }}--}}
+            {{--</div>--}}
+            <div class="main-area">
+                                           <div id="wmd-button-bar"></div>
+                                           {{ Form::textarea('body',null, ['class'=>'wmd-input','id'=>'wmd-input']) }}
+
+                                           <div id="wmd-preview" class="wmd-panel wmd-preview"></div>
+
+                                   </div>
+
         </div>
 
         <div class="form-actions">
@@ -35,4 +52,12 @@
 
     {{ Form::close() }}
  
+@stop
+
+@section('footer')
+<script>
+    var converter2 = new Markdown.Converter();
+    var editor1 = new Markdown.Editor(converter2);
+    editor1.run();
+</script>
 @stop

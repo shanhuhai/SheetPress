@@ -2,7 +2,7 @@
  
 @section('main')
  
-    <h2>页面内容</h2>
+    <h2>文章内容</h2>
 
         <div id="onepage">
             

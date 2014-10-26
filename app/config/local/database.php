@@ -23,7 +23,7 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'blog',
+			'database'  => 'SheetPress',
 			'username'  => 'root',
 			'password'  => '123456',
 			'charset'   => 'utf8',
